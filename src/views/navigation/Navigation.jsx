@@ -7,8 +7,8 @@ import { FaHistory } from 'react-icons/fa';
 
 const Navigation = () => {
     return (
-        <nav className="col-span-1 bg-white rounded-r-lg flex flex-col justify-between items-center py-6">
-            <div>
+        <nav className="col-span-1 bg-creme rounded-r-[50px] flex flex-col justify-between items-center py-6">
+            <div >
                 <FaUserCircle />
             </div>
             <div>
