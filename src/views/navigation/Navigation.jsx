@@ -10,17 +10,17 @@ export default function Navigation() {
     };
 
     return (
-        <nav className={`col-span-${isMenuVisible ? 4 : 1}`}>
+        <nav className={`col-span-${isMenuVisible ? 1 : 4}`}>
             <div className="menu-area">
-                <button onClick={handleToggleClick} className={`utilize-toggle ${isMenuVisible ? 'show' : 'hidden'}`} title="Toggle het menu" aria-expanded={isMenuVisible} aria-controls="utilize-menu" role="button">
+                <button onClick={handleToggleClick} className={`utilize-toggle ${isMenuVisible ? 'hidden' : 'show'}`} title="Toggle het menu" aria-expanded={isMenuVisible} aria-controls="utilize-menu" role="button">
                     <span className="chevron-icon">
                         <FaChevronLeft />
                     </span>
-                    <span className="label">Sluiten</span>
+                    <span className={`label ${isMenuVisible ? 'hidden' : 'show'}`}>Sluiten</span>
                 </button>
             </div>
 
-            <div id="utilize-menu" aria-hidden={!isMenuVisible} className={isMenuVisible ? 'show' : 'hidden'}>
+            <div id="utilize-menu" aria-hidden={!isMenuVisible} className={isMenuVisible ? 'hidden' : 'show'}>
                 <div className="w-full">
                     <a className="profile-button" href="#">
                         <img src="profile.jpeg" alt="user"/>
