@@ -1,3 +1,7 @@
+nav {
+  z-index: 10;
+}
+
 .menu-area {
   position: fixed;
   bottom: 0;
@@ -58,14 +62,18 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  padding: 35px 0 115px 25px;
-
+  padding: 35px 0 115px 0;
 
   &.show {
     width: 325px;
     transition: ease-in-out 1s;
+
+    @media only screen and (max-width: 576px) {
+      width: 100vw !important;
+      opacity: 1;
+    }
 
     .darkmode-toggle {
       transform: rotate(0deg);
@@ -78,9 +86,15 @@
     width: 80px;
     transition: ease-in-out 1s;
 
+    @media only screen and (max-width: 576px) {
+      width: 0 !important;
+      opacity: 0;
+    }
+
     .label {
       opacity: 0;
-      transition: ease-in-out 1s;
+      transition: ease-in-out 2s;
+      transition-delay: 0.75s;
       margin: 0;
       width: 0;
     }
@@ -107,7 +121,8 @@
 
   .label {
     opacity: 1;
-    transition: ease-in-out 1s;
+    transition: ease-in-out 2s;
+    transition-delay: 0.75s;
     margin-left: 12px;
     display: flex;
     width: 100%;
@@ -135,7 +150,23 @@
     transform: rotate(90deg);
     margin-top: 48px;
     transition: ease-in-out 1s;
+    background: white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 20px;
   }
+
+  .icon-sun {
+    color: #ffffff;
+    padding: 8px;
+  }
+
+  .icon-moon {
+    opacity: 0;
+    width: 0;
+  }
+
 
   input {
     opacity: 0;
@@ -144,25 +175,13 @@
   }
 
   .toggle-button {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ffffff;
-    transition: .4s;
-
-    &:before {
-      position: absolute;
-      content: "";
-      height: 26px;
-      width: 26px;
-      left: 4px;
-      bottom: 4px;
-      background-color: #ffffff;
-      transition: .4s;
-    }
+    background-color: #d7682d;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
   }
 
 

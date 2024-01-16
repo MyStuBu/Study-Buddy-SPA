@@ -1,0 +1,79 @@
+.toolbar-area {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 30px;
+  z-index: 1001;
+
+  .toolbar-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    padding-top: 45px;
+
+
+    &.hidden {
+      .chevron-icon {
+        transform: rotate(0deg);
+        transition: ease-in-out 1s;
+      }
+    }
+
+    &.show {
+      .chevron-icon {
+        transform: rotate(180deg);
+        transition: ease-in-out 1s;
+      }
+    }
+
+    span {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+
+      svg {
+        width: 100%;
+        color: #d7682d;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+#utilize-toolbar {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+  background: #f0eee8;
+  padding: 50px 50px;
+
+  &.show {
+    width: 100%;
+    opacity: 1;
+    transition: ease-in-out 1s;
+
+    @media only screen and (max-width: 576px) {
+      width: 100vw !important;
+      opacity: 1;
+    }
+  }
+
+  &.hidden {
+    width: 0;
+    opacity: 0;
+    transition: ease-in-out 1s;
+
+    @media only screen and (max-width: 576px) {
+      width: 0 !important;
+      opacity: 0;
+    }
+  }
+}

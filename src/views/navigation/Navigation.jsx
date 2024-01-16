@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaGear, FaUserGroup, FaClipboardList } from 'react-icons/fa6';
-import { FaHistory, FaComment, FaBell, FaChevronLeft } from 'react-icons/fa';
+import {FaHistory, FaComment, FaBell, FaChevronLeft, FaMoon, FaSun} from 'react-icons/fa';
 
 export default function Navigation() {
     const [isMenuVisible, setMenuVisible] = useState(true);
@@ -21,7 +21,7 @@ export default function Navigation() {
             </div>
 
             <div id="utilize-menu" aria-hidden={!isMenuVisible} className={isMenuVisible ? 'hidden' : 'show'}>
-                <div className="w-full">
+                <div className="">
                     <a className="profile-button" href="#">
                         <img src="profile.jpeg" alt="user"/>
                         <span className="label">Naam naam</span>
@@ -48,7 +48,7 @@ export default function Navigation() {
                             </a>
 
                         </li>
-                        <li className="py-2">
+                        <li className="">
                             <a href="">
                                 <span><FaUserGroup /></span>
                                 <span className="label">Groepchat</span>
@@ -71,11 +71,15 @@ export default function Navigation() {
                             </a>
                         </li>
                     </ul>
-
-                    <label className="darkmode-toggle">
-                            <input type="checkbox"/>
-                                <span className="toggle-button"> </span>
-                    </label>
+                </div>
+                <div className="wrapper">
+                    <div className="darkmode-toggle">
+                        <input type="checkbox"/>
+                        <label className="toggle-button">
+                            <span className="icon-sun"><FaSun /></span>
+                            <span className="icon-moon"><FaMoon /></span>
+                        </label>
+                    </div>
                 </div>
             </div>
         </nav>

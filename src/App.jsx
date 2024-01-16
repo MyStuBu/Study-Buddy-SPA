@@ -2,7 +2,7 @@ import React from 'react';
 import './styles/App.css';
 import Chat from './views/chat/Chat';
 import Navigation from './views/navigation/Navigation';
-// import Toolbar from './views/toolbar/Toolbar';
+import Toolbar from './views/toolbar/Toolbar';
 
 function App() {
     return (
@@ -11,7 +11,7 @@ function App() {
                 <div className="grid grid-cols-12 gap-4 h-screen">
                     <Navigation/>
                     <Chat/>
-                    {/*<Toolbar/>*/}
+                    <Toolbar/>
                 </div>
             </body>
         </div>

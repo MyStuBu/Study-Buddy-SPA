@@ -1,6 +1,7 @@
 @import "index.css";
 
 @import "components/navigation.scss";
+@import "components/toolbar.scss";
 
 .App {
   text-align: center;
