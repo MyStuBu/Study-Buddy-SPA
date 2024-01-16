@@ -1,5 +1,7 @@
 @import "index.css";
 
+@import "settings.scss";
+
 @import "components/navigation.scss";
 @import "components/toolbar.scss";
 

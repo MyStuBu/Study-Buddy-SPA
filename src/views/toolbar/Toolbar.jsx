@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {FaChevronRight, FaMagic, FaPlus, FaSearch} from 'react-icons/fa';
 
 const Toolbar = () => {
-    const [isMenuVisible, setMenuVisible] = useState(true);
+    const [isMenuVisible, setMenuVisible] = useState(false);
 
     const handleToggleClick = () => {
         setMenuVisible(!isMenuVisible);
@@ -12,7 +12,7 @@ const Toolbar = () => {
     return (
         <div className={`col-span-${isMenuVisible ? 1 : 4}`}>
             <div className="toolbar-area">
-                <button onClick={handleToggleClick} className={`toolbar-toggle ${isMenuVisible ? 'hidden' : 'show'}`} title="Toggle het menu" aria-expanded={isMenuVisible} aria-controls="utilize-menu" role="button">
+                <button onClick={handleToggleClick} className={`toolbar-toggle ${isMenuVisible ? 'hidden' : 'show'}`} title="Toggle het menu" aria-expanded={isMenuVisible} aria-controls="utilize-toolbar" role="button">
                     <span className="chevron-icon">
                         <FaChevronRight />
                     </span>
@@ -29,66 +29,73 @@ const Toolbar = () => {
                 </div>
 
                 <div className="w-full">
-                    <h4 className="bold text-left font-sans text-[12] font-bold text-darkgreen mb-[10px] ">Voorgesteld</h4>
-                    <div  className="bg-darkgreen w-full h-[125px] mb-[20px] rounded-[20px] flex">
-                        <img src="" alt=""/>
-                        <div className="p-[35px] text-secondary font-serif">
-                            <p>Het Dot-framework stap voor stap</p>
-                            <a href="" className="p-[35px] text-secondary font-serif">Bekijk meer</a>
+                    <h4 className="font-sans text-md mb-[10px] text-darkgreen ">Voorgesteld</h4>
+                    <div  className="news-item">
+                        <div className="bg-image"></div>
+                        <div className="body-text">
+                            <p className="text-md">Het Dot-framework stap voor stap</p>
+                            <a href="" className="text-sm">Bekijk meer</a>
                         </div>
                     </div>
 
-                    <div  className="bg-darkgreen w-full h-[125px] rounded-[20px] flex">
-                        <img src="" alt=""/>
-                        <div className="p-[35px] text-secondary font-serif flex flex-col ">
-                            <p>Het Dot-framework stap voor stap</p>
-                            <a href="" className="p-[35px] text-secondary font-serif">Bekijk meer</a>
+                    <div  className="news-item">
+                        <div className="bg-image"></div>
+                        <div className="body-text">
+                            <p className="text-md">Het Dot-framework stap voor stap</p>
+                            <a href="" className="text-sm">Bekijk meer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 className="font-sans text-md mb-[10px] text-darkgreen ">Tech-update</h4>
+                    <div className="flex justify-between">
+                        <div className="tech-item">
+                            <a href="">
+                                <div className="bg-image"></div>
+                                <div className="text-body text-sm font-serif">
+                                    <p className="text-xs">11 okt 2023</p>
+                                    <p>Het Dot-framework stap voor stap</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div className="tech-item">
+                            <a href="">
+                                <div className="bg-image"></div>
+                                <div className="text-body text-sm font-serif">
+                                    <p className="text-xs">11 okt 2023</p>
+                                    <p>Het Dot-framework stap voor stap</p>
+                                </div>
+                            </a>
                         </div>
 
                     </div>
                 </div>
 
                 <div>
-                    <h4 className="bold text-left font-sans text-[12] font-bold text-darkgreen mt-[30px] mb-[10px]">Tech-update</h4>
-                    <div className="flex justify-between">
-                        <div  className="bg-darkgreen w-full rounded-[20px] mr-[10px]">
-                            <img src="" alt=""/>
-                            <div className="p-[35px] text-secondary font-serif">
-                                <p>11 okt 2023</p>
-                                <p>Het Dot-framework stap voor stap</p>
-                            </div>
-                            <a href="" className="p-[35px] text-secondary font-serif">Bekijk meer</a>
-                        </div>
-                        <div  className="bg-darkgreen w-full  rounded-[20px] ml-[10px]">
-                            <img src="" alt=""/>
-                            <div className="p-[35px] text-secondary font-serif">
-                                <p>11 okt 2023</p>
-                                <p>Het Dot-framework stap voor stap</p>
-                            </div>
-                            <a href="" className="p-[35px] text-secondary font-serif">Bekijk meer</a>
-                        </div>
-                    </div>
-                </div>
+                    <h4 className="bold text-left font-sans text-md font-bold text-primary mt-[30px] mb-[10px]">Snel naar...</h4>
 
-                <div>
-                    <h4 className="bold text-left font-sans text-[12] font-bold text-primary mt-[30px] mb-[10px]">Snel naar...</h4>
                     <div className="flex justify-between">
-                        <div className="bg-white rounded-[20px]">
-                            <h4 className="bold text-left font-sans text-[12] font-bold text-primary ml-[16px] mt-[15px] mb-[15px]">Start een groepchat</h4>
-                            <div className="flex justify-between mx-[10px]">
-                                <img className="rounded-full" src="" alt=""/>
-                                <p>Tom Janssen</p>
+                        <div className="quick-menu bg-white rounded-[20px]">
+                            <h4 className="bold text-left font-sans text-md font-bold text-primary ml-[16px] mt-[15px] mb-[15px]">Start een groepchat</h4>
+
+                            <div className="flex justify-between mx-[10px] mb-2">
+                                <img src="profile.jpeg" alt=""/>
+                                <p className="text-xs text-primary">Tom Janssen</p>
                                 <a className="bg-primary flex items-center text-creme rounded-[6px] ml-5" href="">
                                     <FaPlus className="pl-2 text-lg" />
-                                    <span className="py-1 pl-[6px] pr-[50px]">Uitnodigen</span>
+                                    <span className="py-1 px-[6px] text-xs">Uitnodigen</span>
                                 </a>
                             </div>
-                            <div className="flex justify-between">
-                                <img src="" alt=""/>
-                                <p>Anna Bakker</p>
+
+
+                            <div className="flex justify-between mx-[10px]">
+                                <img src="profile.jpeg" alt=""/>
+                                <p className="text-xs text-primary">Anna Bakker</p>
                                 <a className="bg-primary flex items-center text-creme rounded-[6px] ml-5" href="">
                                     <FaPlus className="pl-2 text-lg" />
-                                    <span className="py-1 pl-[6px] pr-[50px]">Uitnodigen</span>
+                                    <span className="py-1 px-[6px] text-xs">Uitnodigen</span>
                                 </a>
                             </div>
                         </div>
