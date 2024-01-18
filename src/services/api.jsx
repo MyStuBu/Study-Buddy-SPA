@@ -1,9 +1,9 @@
-const BASE_URL = process.env.API_URL;
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 const api = {
     PostMessage: async (userMessage) => {
         try {
-            const response = await fetch(`${BASE_URL}/conversation/chat`, {
+            const response = await fetch(`${backendUrl}/conversation/chat`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

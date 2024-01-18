@@ -2,8 +2,10 @@ import React from 'react';
 import {FcGoogle} from 'react-icons/fc';
 
 function LoginCard() {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
     const google = () => {
-        window.open('http://localhost:8080/auth/google', '_self');
+        window.open(`${backendUrl}/auth/google`, '_self');
     };
 
     return (
