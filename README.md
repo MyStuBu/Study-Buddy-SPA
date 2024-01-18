@@ -1,4 +1,4 @@
-# message-handling-system
+# Study Buddy Single Page Application
 
 Follow these steps to set up and run the Message Handling System on your local environment using Docker Desktop:
 
