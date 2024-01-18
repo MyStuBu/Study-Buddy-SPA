@@ -1,6 +1,6 @@
 # Study Buddy Single Page Application
 
-Follow these steps to set up and run the Message Handling System on your local environment using Docker Desktop:
+Follow these steps to set up and run the Study Buddy spa on your local environment using Docker CLI:
 
 ### 1. Download the Repository </br></br>
 
